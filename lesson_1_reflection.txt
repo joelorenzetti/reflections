@@ -6,3 +6,7 @@ git log    gets a log of all changes made, with their ID number
 git diff id1 id2   finds the actual differences
 git checkout log ID   pulls up the version of the repository at that commit
 git clone https://.....  clones a git repository
+ls -a    lets you see all files, even ones that start with .
+git init   creates a git repository
+git status   shows what files were changed since last commit
+git add    adds files to the staging area
