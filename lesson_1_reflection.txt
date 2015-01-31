@@ -1,0 +1,8 @@
+
+COMMANDS:
+diff -u file1 file2    is the command for comparing two files
+git config --global color.ui auto    is command to get colored diff
+git log    gets a log of all changes made, with their ID number
+git diff id1 id2   finds the actual differences
+git checkout log ID   pulls up the version of the repository at that commit
+git clone https://.....  clones a git repository

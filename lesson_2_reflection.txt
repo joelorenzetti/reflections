@@ -1,0 +1,1 @@
+When you initialize a repository it creates a .git item in the directory.  However, no commits are created when you initialize it.
