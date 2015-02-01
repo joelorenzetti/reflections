@@ -10,3 +10,20 @@ ls -a    lets you see all files, even ones that start with .
 git init   creates a git repository
 git status   shows what files were changed since last commit
 git add    adds files to the staging area
+git diff   lets you see changes made that have yet to be added to staging area
+git diff --staged    lets you see the differences between staged files and current commit
+git reset --hard    discards any changes in working directory or staging area (PERMANENT)
+git branch    shows current branches (* next to name means that is checked out)
+git branch new_branch_name    makes a new branch with the given name
+git checkout branch_name    checks out a branch
+git log --graph --oneline branch1 branch2 branch3 etc.  helps you visualize the branches
+git checkout -b new_branch_name    like first createing a branch and then checkout all at once
+git merge branch1 branch2     merges two branches
+git show ID     shows the diff between commit ID and its parent, without knowing parent ID
+git branch -d branch_name     deletes a branch
+git merge --abort    restore files to state before starting the merge
+git log -n #    shows a log of # number of past commits
+git remote    allows you to view and create remotes
+git remote add "name"   use the name you want to refer to it as (first usually is origin)
+git remote -v   a more detailed output
+git push remoteToSendTo nameOfLocalBranch   to push to remote

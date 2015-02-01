@@ -2,3 +2,24 @@ When you initialize a repository it creates a .git item in the directory.  Howev
 
 The staging area is where you add the files and then git commit batches all of the files in the staging area for the commit
 
+git diff id1 id2 lets you see the differences between commits, but often you may want to see the difference between what is in the staging area currently and what has been modified in the working directory.  This shows any changes you have made that you have not added to the staging area yet.
+
+a label on commits is called BRANCHES, the main branch is called MASTER, which is created for you when repository is created.
+
+you get to name the other branches ("Italian") or ("Experimental")
+
+you can check out branches, similar to how you check out commits
+
+if you make a new commit while you are in a detached HEAD state, it means that if you commit the changes, but then switch branches, you won't be able to get to the commit again unless you personally saved the commit ID.  This is because the commit was not created on a branch, and each commit finds the one before it in a parent-child like structure.  So being anywhere else will never find your commit again.  So make sure to make a new branch if you want to do that.
+
+A merge has two parents.  If you merge with master, you can delete the other branch because it is no longer needed.  The commits from that branch will still be there though.  When commits are merged, the git log will sort the commits by the time they are created.
+
+Since the commits could be interwoven, if you wanted to do a git diff with the commit, you would need to know what its parent was.  How do you find out?  Use git show
+
+If you want stuff from master into another branch, first checkout the other branch, and then say git merge branch1 branchtomergefrom
+
+If error because of conflict, open the file and find |||| symbols.  Top is your new code in branch1, middle is conflicting section, bottom is new code from other branch.
+
+Git hub is an easy way to share entire repositories.  You need to sync your commit history to GitHub for other people to see.  First make sure that your changes are added to your local repository on your computer.
+
+First get the repository initially into GitHub.  First create an empty repository.  A "remote" is a remote repository that you might want to send and receive commits to and from.  You can push and pull data to remotes.  You usually push branches and it will push all commits on that branch that arent currently in the remote.
