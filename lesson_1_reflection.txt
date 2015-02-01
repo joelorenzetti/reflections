@@ -27,3 +27,8 @@ git remote    allows you to view and create remotes
 git remote add "name"   use the name you want to refer to it as (first usually is origin)
 git remote -v   a more detailed output
 git push remoteToSendTo nameOfLocalBranch   to push to remote
+git pull remoteToGetFrom branchToPull    getting stuff from remote
+git fetch    allows you to pull a branch without changing your own branch (kind of makes a new branch?)
+git fetch origin   would update all local copies of branch of origin remote
+git log origin/master    looks at just the last known origin/master place
+

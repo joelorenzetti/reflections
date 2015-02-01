@@ -23,3 +23,21 @@ If error because of conflict, open the file and find |||| symbols.  Top is your 
 Git hub is an easy way to share entire repositories.  You need to sync your commit history to GitHub for other people to see.  First make sure that your changes are added to your local repository on your computer.
 
 First get the repository initially into GitHub.  First create an empty repository.  A "remote" is a remote repository that you might want to send and receive commits to and from.  You can push and pull data to remotes.  You usually push branches and it will push all commits on that branch that arent currently in the remote.
+
+You can also make changes in github, and then move them to your computer.
+
+github has a feature called "forking" which lets you copy somebody else's repository github servers without pulling to your machine.  Then you would probably want to pull to your machine to make changes.  
+
+If you want someone to collaborate, add them to the collaborators section under GitHub
+
+If there is commits in both your local branch of a repository and a remote branch, you probably want to merge them similar to before
+
+If you update local repository branch and not remote, the origin/master will still point to the last known location of the remote.  The way you would update this information is to push the remote again.  origin/master is the local copy of the remote branch
+
+fetching lets you update the local copy of the remote branch with the remote branches without changing the actual local branch, then you could merge them if you wanted.  So if the remote has commit A and local has B, before git fetch 
+
+A fast forward merge is when the branch you are merging to is an ancestor of the branch you are merging from.
+
+If you want to make a change in collaborated project and get feedback: Start by making a new local branch to make the change in.  Then checkout that branch, then make changes and commit them to the branch. Then push the branch to the remote, where it will change add a branch to the remote so you don't change remote's master branch.  Then later you can merge the master and new branch on github.   Submit a pull request or "merge request" to let the other person to see your new branch and the differences and then add the merge.
+
+if you made a fork of an original repository, and then the original changes, you will need to pull info to your local to resolve conflicts.  To do this make the original repository with a remote called "upstream"  This adds labels such as upstream/master  Then after the changes are made, you can push up to your fork
